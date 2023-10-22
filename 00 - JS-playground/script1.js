@@ -185,8 +185,44 @@ const essentialData = books.map((book) => {
 	return {
 		title: book.title,
 		author: book.author,
-		reviewCount: getTotalReivewCount(book)
+		reviewCount: getTotalReivewCount(book),
 	};
 });
 
-essentialData
+const longBooks = books.filter(
+	(book) => book.pages > 500 && book.hasMovieAdaptation
+);
+
+const adventureBooks = books
+	.filter((book) => book.genres.includes("adventure"))
+	.map((book) => book.title);
+
+const pagesAllBooks = books.reduce((pages, book) => pages + book.pages, 0);
+
+const xyz = [3, 7, 1, 2, 5];
+
+const sorted = xyz.slice().sort((a, b) => a - b);
+
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+
+const newBook = {
+	id: 6,
+	title: "Harry potter and the Chamber of Secrets",
+	author: "J.K. Rowling",
+};
+
+const booksAfterAdd = [...books, newBook];
+
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id != 3);
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+	.then((res) => res.json())
+	.then((data) => console.log(data));
+
+const getTodos = async () => {
+	const res = await fetch("https://jsonplaceholder.typicode.com/todos")
+	data = await res.json();
+	console.log(data);
+};
+
+getTodos()
