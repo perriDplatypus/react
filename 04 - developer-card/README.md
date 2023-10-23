@@ -2,4 +2,4 @@
 
 Created a developer card, as a  part of a coding challenge.
 
-![](avatar.jpg)[screenshot](public/screenshot.png)
+[![1698056416022](image/README/1698056416022.png)](public/screenshot.png)
