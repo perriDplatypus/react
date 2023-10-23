@@ -4,7 +4,7 @@ import "./index.css";
 
 const getData = () => {
 	return {
-		image: "%PUBLIC_URL%/avatar.jpg",
+		image: "avatar.jpg",
 		name: "Abhay Tyagi",
 		description:
 			"Data Developer/Full-Stack Developer at AroFlo Innovations. When I am not at work, I like to play guitar, and play video games. I also like board games and hanging out with my friends.",
@@ -31,7 +31,7 @@ const App = () => {
 };
 
 const Avatar = () => {
-	return <image className="avatar" src={getData().image} alt="Abhay Tyagi" />;
+	return <img className="avatar" src={getData().image} alt="Abhay Tyagi" />;
 };
 
 const Intro = () => {
